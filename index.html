@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AADI CAR AC | Precision Cooling</title>
-    
+    <title>AADI CAR AC</title>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
+
+    <!-- Tailwind CSS CDN (KEPT) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -18,10 +18,10 @@
           extend: {
             colors: {
               brand: {
-                black: '#000000', // OLED Black
-                gunmetal: '#1A1A1A', // Section Backgrounds
-                red: '#E11D48', // Racing Red
-                yellow: '#FACC15', // Vibrant Yellow
+                black: '#000000',
+                gunmetal: '#1A1A1A',
+                red: '#E11D48',
+                yellow: '#FACC15',
                 white: '#FFFFFF',
                 subtle: '#333333',
               }
@@ -37,9 +37,10 @@
         }
       }
     </script>
+
     <style>
       html {
-        scroll-behavior: auto; /* Handled by GSAP/Native combination */
+        scroll-behavior: auto;
         background-color: #000000;
       }
       body {
@@ -48,13 +49,12 @@
         overflow-x: hidden;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        cursor: none; /* Custom cursor takes over */
+        cursor: none;
       }
       ::selection {
         background-color: #E11D48;
         color: #FFFFFF;
       }
-      /* Hide scrollbar for premium feel */
       ::-webkit-scrollbar {
         width: 0px;
         background: transparent;
@@ -64,24 +64,12 @@
         color: transparent;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "gsap": "https://esm.sh/gsap@^3.14.2",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom": "https://esm.sh/react-dom@^19.2.3",
-    "react-dom/client": "https://esm.sh/react-dom@^19.2.3/client",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "gsap/": "https://esm.sh/gsap@^3.14.2/"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+  </head>
+
   <body>
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+
+    <!-- ✅ Correct Vite entry -->
+    <script type="module" src="/src/index.tsx"></script>
+  </body>
 </html>
